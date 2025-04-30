@@ -1,0 +1,23 @@
+{
+  "name": "Node.js",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "npm install",
+  "onCreateCommand": "sh .devcontainer/on-create.sh",
+  "postCreateCommand": "",
+  "postAttachCommand": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "editorconfig.editorconfig",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "github.copilot",
+        "github.copilot-chat",
+        "ms-playwright.playwright"
+      ]
+    }
+  }
+}

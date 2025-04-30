@@ -1,0 +1,32 @@
+name: GitHub Classroom Workflow
+
+on:
+  - push
+  - workflow_dispatch
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    name: Autograding
+    timeout-minutes: 60
+    runs-on: ubuntu-22.04
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+      # Checkout the repository
+      - uses: actions/checkout@v4
+      # Set up Node.js
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+      # We need to install Chromium for Playwright
+      - name: Install Playwright Chromium Browser
+        run: npx playwright install chromium --with-deps
+      # - name: Run tests
+      - uses: education/autograding@v1

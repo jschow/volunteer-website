@@ -1,0 +1,29 @@
+{
+  "eslint.validate": [
+    "javascript"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.extraLiners": " ",
+  "files.eol": "\n",
+  "workbench.sideBar.location": "left",
+  "editor.minimap.enabled": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 45,
+  "editor.suggestFontSize": 14,
+  "editor.suggestLineHeight": 28,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.3,
+  "search.useIgnoreFiles": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/package-lock.json": true
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "remote.autoForwardPorts": true
+}

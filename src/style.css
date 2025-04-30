@@ -1,0 +1,44 @@
+:root {
+  /* font weights */
+  --font-thin: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+
+  /* font sizes */
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-xl: 18px;
+
+  /* line heights */
+  --line-height-sm: 20px;
+  --line-height-base: 24px;
+  --line-height-xl: 28px;
+
+  /* base colors */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* slate colors */
+  --slate-50: #F8FAFC;
+  --slate-200: #E2E8F0;
+  --slate-300: #CBD5E1;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-700: #334155;
+  --slate-900: #0F172A;
+}
+
+body {
+  /* Do not change it! */
+  background: #ffffff;
+  color: var(--slate-900);
+  padding: 16px 32px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+}
+
+main {
+  /* Do not change it! */
+  min-height: 100vh;
+}
