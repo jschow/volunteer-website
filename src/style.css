@@ -183,3 +183,62 @@ main {
   transform-origin: top right;
   transform: scale(1.15);
 }
+
+/* ========== Logo Cloud ========== */
+.logo-cloud {
+  background-color: var(--white);
+  padding: 48px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo-cloud-heading {
+  font-family: 'Roboto', sans-serif;
+  color: var(--black);
+  font-size: 32px;
+  font-weight: var(--font-bold);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+
+.logo-container {
+  position: relative;
+  width: 160px;
+  height: 80px;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-grid .logo-container:nth-child(1) img,
+.logo-grid .logo-container:nth-child(2) img,
+.logo-grid .logo-container:nth-child(4) img {
+  transform: scale(1.4);
+}
+
+.logo-container:nth-child(3) {
+  width: 180px;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.logo-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.logo-container .red-logo { opacity: 0; }
+.logo-container:hover .red-logo { opacity: 1; }
+.logo-container:hover .black-logo { opacity: 0; }
