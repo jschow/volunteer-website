@@ -242,3 +242,123 @@ main {
 .logo-container .red-logo { opacity: 0; }
 .logo-container:hover .red-logo { opacity: 1; }
 .logo-container:hover .black-logo { opacity: 0; }
+
+/* ========== Feature Sections ========== */
+.feature {
+  padding: 10rem 0;
+}
+
+.feature1 { background-color: var(--orange); }
+.feature2 { background-color: var(--white); }
+
+.feature-inner {
+  max-width: 1275px;
+  margin: 0 auto;
+  padding: 0 2rem;            /* fix: was '1 2rem' */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.feature-text {
+  flex: 0 0 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.feature-text h1 {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--white);
+  margin: 0 0 3rem;
+}
+
+.feature-text h2 {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--white);
+  margin: 0 0 3rem;
+}
+
+.feature-text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.24px;
+  color: var(--white);
+  margin: 0 0 0.5rem;
+}
+
+.feature-image {
+  flex-shrink: 0;
+  width: 480px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.feature-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transform: scale(1.3) translateY(-1%);
+  transform-origin: center;
+}
+
+.feature1 .feature-image img {
+  transform: scale(1.3) translateY(25px);
+}
+
+/* dark text for feature 2 */
+.feature2 .feature-text h1,
+.feature2 .feature-text h2,
+.feature2 .feature-text p,
+.feature2 .cta-link {
+  color: #000;
+}
+
+.feature2 .feature-text h1 { max-width: 10ch; }
+.feature2 .feature-text p  { max-width: 42ch; }
+
+.cta-link {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #f8f3f3;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.feature2 .cta-link { color: var(--orange); }
+
+/* Responsive stacking */
+@media (max-width: 1024px) {
+  .feature-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .feature-image {
+    width: 100%;
+  }
+  .feature-text {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+}
