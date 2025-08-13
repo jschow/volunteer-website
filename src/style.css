@@ -9,11 +9,11 @@
   --black: #000000;
 
   /* slate */
-  --slate-50: #f8fafc;
-  --slate-200: #e2e8f0;
-  --slate-300: #cbd5e1;
-  --slate-400: #94a3b8;
-  --slate-500: #64748b;
+  --slate-50: #F8FAFC;
+  --slate-200: #E2E8F0;
+  --slate-300: #CBD5E1;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
   --slate-700: #334155;
   --slate-900: #1e3857;
 
@@ -27,8 +27,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -79,7 +78,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: var(--font-bold);
   font-size: 24px;
-  color: #fff1f1;
+  color: #FFF1F1;
   margin: 0;
 }
 
@@ -87,7 +86,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: var(--font-regular);
   font-size: 20px;
-  color: #fff1f1;
+  color: #FFF1F1;
   margin: 0;
 }
 
@@ -103,7 +102,7 @@ main {
   font-family: "Inria Serif", serif;
   font-weight: 400;
   font-size: 24px;
-  color: #fff4f4;
+  color: #FFF4F4;
   text-decoration: none;
 }
 
@@ -132,7 +131,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 64px;
-  color: #f8f3f3;
+  color: #F8F3F3;
   margin: 0 0 3rem;
   line-height: 1;
 }
@@ -141,7 +140,7 @@ main {
   font-family: "Inria Serif", serif;
   font-weight: 400;
   font-size: 36px;
-  color: #faefef;
+  color: #FAEFEF;
   margin: 0 0 3rem;
   line-height: 1.1;
 }
@@ -150,7 +149,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 24px;
-  color: #fef7f7;
+  color: #FEF7F7;
   line-height: 1.6;
   margin: 0 0 0.5rem;
 }
@@ -159,7 +158,7 @@ main {
   font-family: "Inria Serif", serif;
   font-weight: 700;
   font-size: 36px;
-  color: #fff4f4;
+  color: #FFF4F4;
   background-color: var(--orange);
   padding: 1.5rem 1.5rem;
   width: 400px;
@@ -194,7 +193,7 @@ main {
 }
 
 .logo-cloud-heading {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--black);
   font-size: 32px;
   font-weight: var(--font-bold);
@@ -240,32 +239,22 @@ main {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease;
 }
 
-.logo-container .red-logo {
-  opacity: 0;
-}
-.logo-container:hover .red-logo {
-  opacity: 1;
-}
-.logo-container:hover .black-logo {
-  opacity: 0;
-}
+.logo-container .red-logo { opacity: 0; }
+.logo-container:hover .red-logo { opacity: 1; }
+.logo-container:hover .black-logo { opacity: 0; }
 
 /* ========== Feature Sections ========== */
 .feature {
   padding: 10rem 0;
 }
 
-.feature1 {
-  background-color: var(--orange);
-}
-.feature2 {
-  background-color: var(--white);
-}
+.feature1 { background-color: var(--orange); }
+.feature2 { background-color: var(--white); }
 
 .feature-inner {
   max-width: 1275px;
   margin: 0 auto;
-  padding: 0 2rem; /* fix: was '1 2rem' */
+  padding: 0 2rem;            /* fix: was '1 2rem' */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -337,12 +326,8 @@ main {
   color: #000;
 }
 
-.feature2 .feature-text h1 {
-  max-width: 10ch;
-}
-.feature2 .feature-text p {
-  max-width: 42ch;
-}
+.feature2 .feature-text h1 { max-width: 10ch; }
+.feature2 .feature-text p  { max-width: 42ch; }
 
 .cta-link {
   font-family: "Inria Serif", serif;
@@ -361,9 +346,7 @@ main {
   cursor: pointer;
 }
 
-.feature2 .cta-link {
-  color: var(--orange);
-}
+.feature2 .cta-link { color: var(--orange); }
 
 /* Responsive stacking */
 @media (max-width: 1024px) {
@@ -378,4 +361,128 @@ main {
     flex: 1 1 auto;
     max-width: 100%;
   }
+}
+
+/* ===== CTA Section (self-contained, no global overrides) ===== */
+.cta {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background image fills section */
+.cta-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Dark blue gradient to match your brand (#062951 -> #1E3857) */
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #062951, #1e3857);
+  opacity: 0.75;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Foreground content */
+.cta-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  color: #ffffff;
+}
+
+.cta-content h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: #e89359; /* brand orange light */
+}
+
+.cta-content h2 {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: #ffffff;
+  max-width: 785px;
+  margin: 0 auto;
+}
+
+/* Map image sizing and slight pull-up */
+.cta-map {
+  width: 550px;
+  max-width: 90vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-0.75rem);
+}
+
+.cta-content h3 {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+  color: #e89359; /* brand orange light */
+  transform: translateY(-1rem);
+}
+
+/* Buttons row */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 671px;
+  max-width: 90vw;
+  height: 92px;
+}
+
+/* CTA buttons (different from .cta-button used in Hero) */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 50px;
+  height: 92px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Inria Serif", serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.btn.primary { background-color: #c3560c; }  /* your existing --orange (dark) */
+.btn.secondary { background-color: #e89359; } /* light orange */
+
+/* Simple responsiveness */
+@media (max-width: 768px) {
+  .cta-content h1 { font-size: 42px; }
+  .cta-content h2 { font-size: 28px; }
+  .cta-content p  { font-size: 18px; }
+  .btn { height: auto; padding: 14px 28px; font-size: 20px; }
 }
