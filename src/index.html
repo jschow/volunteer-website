@@ -133,6 +133,50 @@
           </div>
         </div>
       </section>
+
+<!-- Testimonials -->
+<section class="bg-white pt-24 pb-6">  <!-- add pt; optional pb -->
+  <div class="max-w-[1275px] mx-auto px-4">
+    <div class="text-center">          <!-- remove mt-24 -->
+      <h1 class="text-[64px] font-bold leading-tight text-black font-['Roboto']">
+        Real Stories, Real Impact
+      </h1>
+    </div>
+
+    <!-- Toggle buttons -->
+    <div class="mt-12 mb-16 flex justify-center gap-[90px]"> <!-- added mb-16 -->
+      <button
+        id="volunteerBtn"
+        class="h-[92px] px-[50px] py-[17px] rounded-[10px] text-white text-[24px] font-bold font-['Inria_Serif']">
+        Volunteers
+      </button>
+      <button
+        id="organizationBtn"
+        class="h-[92px] px-[50px] py-[17px] rounded-[10px] text-white text-[24px] font-bold font-['Inria_Serif']">
+        Organization
+      </button>
+    </div>
+
+    <!-- Slider image -->
+    <div id="testimonial-carousel" class="flex justify-center px-4 py-16">
+      <img
+        id="testimonialImage"
+        src="/images/volunteer_slider.png"
+        alt="Testimonial slider"
+        class="w-auto h-auto rounded-xl transition-transform duration-500 ease-in-out transform translate-x-[12.5%] scale-[1.2]" />
+    </div>
+
+    <!-- Arrows + Title -->
+    <div class="flex justify-center items-center gap-8 mt-16 pb-16"> <!-- was mt-12 -->
+      <button id="leftArrow" class="text-7xl leading-none">‹</button>
+      <h2 id="testimonialTitle" class="font-bold text-[32pt] font-['Roboto']">
+        Volunteer Testimonials
+      </h2>
+      <button id="rightArrow" class="text-7xl leading-none">›</button>
+    </div>
+  </div>
+</section>
+
     </main>
   </body>
 </html>
