@@ -44,7 +44,7 @@ main {
 }
 
 .header {
-  background-color: var(--orange);
+  background-color: #ffffff;
   width: 100%;
 }
 
@@ -78,7 +78,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: var(--font-bold);
   font-size: 24px;
-  color: #FFF1F1;
+  color: #1E3857;
   margin: 0;
 }
 
@@ -86,7 +86,7 @@ main {
   font-family: "Roboto", sans-serif;
   font-weight: var(--font-regular);
   font-size: 20px;
-  color: #FFF1F1;
+  color: #1E3857;
   margin: 0;
 }
 
@@ -102,8 +102,16 @@ main {
   font-family: "Inria Serif", serif;
   font-weight: 400;
   font-size: 24px;
-  color: #FFF4F4;
+  color: #1E3857;
   text-decoration: none;
+}
+
+.navbar-links .contact-btn {
+  background-color: var(--orange);
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-weight: var(--font-bold);
 }
 
 .hero {
