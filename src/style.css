@@ -123,7 +123,7 @@ main {
 .hero-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;   /* <-- make both columns vertically centered */
   gap: 3rem;
 }
 
@@ -181,14 +181,15 @@ main {
   width: 480px;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;   /* center the <img> inside this column */
 }
 
 .hero-img img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  transform-origin: top right;
+  display: block;
+  transform-origin: center right; /* was top right */
   transform: scale(1.15);
 }
 
