@@ -52,7 +52,7 @@ main {
 .navbar {
   max-width: 1250px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +78,7 @@ main {
 .brand-name {
   font-family: "Roboto", sans-serif;
   font-weight: var(--font-bold);
-  font-size: 24px;
+  font-size: 22px;
   color: #1e3857;
   margin: 0;
 }
@@ -101,22 +101,23 @@ main {
 
 .navbar-links a {
   font-family: "Inria Serif", serif;
-  font-weight: 400;
-  font-size: 24px;
+  font-weight: var(--font-regular);
+  font-size: 20px;
   color: #1e3857;
   text-decoration: none;
 }
 
 .navbar-links .contact-btn {
+  font-family: "Inria Serif", serif;
+  font-weight: var(--font-bold);
   background-color: var(--orange);
   color: #ffffff;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 3rem;
   border-radius: 8px;
-  font-weight: var(--font-bold);
 }
 
 .hero {
-  padding: 4rem 2rem;
+  padding: 8rem 2rem;
   max-width: 1275px;
   margin: 0 auto;
 }
