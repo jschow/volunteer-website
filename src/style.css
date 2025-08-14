@@ -478,8 +478,8 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  width: 671px;
+  gap: 40px;
+  width: autp;
   max-width: 90vw;
   height: 92px;
 }
