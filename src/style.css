@@ -124,7 +124,7 @@ main {
 .hero-top {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* <-- make both columns vertically centered */
+  align-items: center;
   gap: 3rem;
 }
 
@@ -182,7 +182,7 @@ main {
   width: 480px;
   display: flex;
   justify-content: flex-end;
-  align-items: center; /* center the <img> inside this column */
+  align-items: center;
 }
 
 .hero-img img {
@@ -190,7 +190,7 @@ main {
   height: auto;
   border-radius: 12px;
   display: block;
-  transform-origin: center right; /* was top right */
+  transform-origin: center right;
   transform: scale(1.15);
 }
 
@@ -261,7 +261,7 @@ main {
   opacity: 0;
 }
 
-/* ========== Feature Sections ========== */
+/* Feature Sections */
 .feature {
   padding: 10rem 0;
 }
@@ -276,7 +276,7 @@ main {
 .feature-inner {
   max-width: 1275px;
   margin: 0 auto;
-  padding: 0 2rem; /* fix: was '1 2rem' */
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -340,7 +340,6 @@ main {
   transform: scale(1.3) translateY(25px);
 }
 
-/* dark text for feature 2 */
 .feature2 .feature-text h1,
 .feature2 .feature-text h2,
 .feature2 .feature-text p,
@@ -391,21 +390,19 @@ main {
   }
 }
 
-/* ===== CTA Section (self-contained, no global overrides) ===== */
+/* CTA Section */
 .cta {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-/* Background image fills section */
 .cta-image {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* Dark blue gradient to match your brand (#062951 -> #1E3857) */
 .gradient-overlay {
   position: absolute;
   inset: 0;
@@ -435,7 +432,7 @@ main {
   font-weight: 700;
   font-size: 64px;
   line-height: 1;
-  color: #e89359; /* brand orange light */
+  color: #e89359;
 }
 
 .cta-content h2 {
@@ -457,7 +454,6 @@ main {
   margin: 0 auto;
 }
 
-/* Map image sizing and slight pull-up */
 .cta-map {
   width: 550px;
   max-width: 90vw;
@@ -472,7 +468,7 @@ main {
   font-weight: 700;
   font-size: 32px;
   line-height: 1;
-  color: #e89359; /* brand orange light */
+  color: #e89359;
   transform: translateY(-1rem);
 }
 
@@ -487,7 +483,7 @@ main {
   height: 92px;
 }
 
-/* CTA buttons (different from .cta-button used in Hero) */
+/* CTA buttons */
 .btn {
   display: flex;
   align-items: center;
@@ -506,10 +502,11 @@ main {
 
 .btn.primary {
   background-color: #c3560c;
-} /* your existing --orange (dark) */
+}
+
 .btn.secondary {
   background-color: #e89359;
-} /* light orange */
+}
 
 /* Simple responsiveness */
 @media (max-width: 768px) {

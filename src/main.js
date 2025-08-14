@@ -1,6 +1,5 @@
-console.log(document.querySelector('main'));
+console.log(document.querySelector("main"));
 
-// ===== Testimonials wiring =====
 const volunteerBtn = document.getElementById("volunteerBtn");
 const organizationBtn = document.getElementById("organizationBtn");
 const testimonialImage = document.getElementById("testimonialImage");
@@ -20,26 +19,29 @@ if (volunteerBtn && organizationBtn && testimonialImage && testimonialTitle && l
     if (active === "volunteer") {
       testimonialImage.src = "/images/volunteer_slider.png";
       testimonialTitle.textContent = "Volunteer Testimonials";
-      volunteerBtn.style.backgroundColor = "#C3560C"; // active
-      organizationBtn.style.backgroundColor = "#A0ABB7"; // inactive
+      volunteerBtn.style.backgroundColor = "#C3560C";
+      organizationBtn.style.backgroundColor = "#A0ABB7";
     } else {
       testimonialImage.src = "/images/organization_slider.png";
       testimonialTitle.textContent = "Organization Testimonials";
-      volunteerBtn.style.backgroundColor = "#A0ABB7"; // inactive
-      organizationBtn.style.backgroundColor = "#062951"; // active
+      volunteerBtn.style.backgroundColor = "#A0ABB7";
+      organizationBtn.style.backgroundColor = "#062951";
     }
-    isShifted = false; // reset to default (right-pushed)
+    isShifted = false;
     updateSliderPosition();
   }
 
-  // Initial state
   setActiveButton("volunteer");
 
-  // Toggle
   volunteerBtn.addEventListener("click", () => setActiveButton("volunteer"));
   organizationBtn.addEventListener("click", () => setActiveButton("organization"));
 
-  // Simple two-position slide
-  leftArrow.addEventListener("click", () => { isShifted = false; updateSliderPosition(); });
-  rightArrow.addEventListener("click", () => { isShifted = true;  updateSliderPosition(); });
+  leftArrow.addEventListener("click", () => {
+    isShifted = false;
+    updateSliderPosition();
+  });
+  rightArrow.addEventListener("click", () => {
+    isShifted = true;
+    updateSliderPosition();
+  });
 }
